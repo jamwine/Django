@@ -34,11 +34,23 @@ After the Superuser gets created successfully, utilize the Django (on Docker ima
 
 - **Run the server**: To test your app, navigate to the directory of your Django project and enter the command "python manage.py runserver". This will start the development server, and you can access your app by navigating to http://127.0.0.1:8000/ in your web browser.
 
+## Migration Workflow
+
+**Important**: Make sure your app is in `INSTALLED_APPS` inside `settings.py`
+
+- Step 1: Change model code
+- Step 2: Generate migration script (check it!)
+  `docker-compose exec web python manage.py makemigrations`
+- Optional Step: Show migrations
+  `docker-compose exec web python manage.py showmigrations`
+- Step 3: Run migrations
+  `docker-compose exec web python manage.py migrate`
+
 ## Some other useful Django commands
 
 - `docker-compose exec web django-admin startproject <project-name> .`
 - `docker-compose exec web python manage.py startapp <app-name>`
-- `docker-compose exec web python manage.py makemigrations`
-- `docker-compose exec web python manage.py migrate`
+- `docker-compose exec web python manage.py sqlmigrate <app-name> <migration-name/number>`
+- `docker-compose run --rm web sh -c "python manage.py runserver"`
 - `docker-compose run --rm web sh -c "python manage.py runserver 0.0.0.0:8000"`
 - `docker-compose logs -f`
