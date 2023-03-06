@@ -1,27 +1,31 @@
 version: "3.8"
 
 services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: django_postgres_container
+    restart: on-failure
+    environment:
+      - POSTGRES_DB=web
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data/
+
   web:
-    build:
-      context: .
-    container_name: django_webserver
+    build: .
+    container_name: django_webserver_container
     ports:
       - "8000:8000"
     volumes:
-      - ./app:/app
+      - ./django_web:/django_web
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     env_file:
-      - ./.env.dev
+      - ./.dev.env
     depends_on:
       - db
-
-  db:
-    image: postgres:14.2-alpine
-    container_name: django_postgres
-    environment:
-      - POSTGRES_DB=web
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
