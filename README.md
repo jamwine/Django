@@ -7,8 +7,7 @@ This repository contains an example of the base Docker image with Django and Pos
 To get started, follow the below steps:
 
 - Clone the repository.
-- Execute `docker-compose up -d --build`. This will build the image and start the container.
-- Test the Django environment for any errors using this command: `docker-compose run --rm web sh -c "python manage.py test && flake8"`
+- Execute `docker-compose up -d --build`, this will build the image and start the container.
 - On the browser, open http://localhost:8000/admin for the Django UI.
 - For creating the **admin** credentials, run the following command: `docker-compose exec web python manage.py createsuperuser`
 
@@ -54,3 +53,4 @@ After the Superuser gets created successfully, utilize the Django (on Docker ima
 - `docker-compose run --rm web sh -c "python manage.py runserver"`
 - `docker-compose run --rm web sh -c "python manage.py runserver 0.0.0.0:8000"`
 - `docker-compose logs -f`
+- Test the Django environment for any errors using this command: `docker-compose run --rm web sh -c "python manage.py test && flake8"`
