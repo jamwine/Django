@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %} Welcome {% endblock title %} 
+
+{% block content %}
+<h1>Welcome to the Meeting Planner!</h1>
+<p>This is the demo application using <em>Django</em>.</p>
+
+<img src="{% static 'meeting_planner/calendar.png' %}" alt="calendar" width="100px"/>
+
+<h2>Meetings</h2>
+<ul>
+  {% for meeting in meetings %}
+  <li>
+    <a href="{% url 'detail' meeting.id %}"> {{ meeting.title }} </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'new_meeting' %}">Create a new Meeting</a>
+<br />
+<a href="{% url 'new_room' %}">Create a new Room</a>
+<br />
+<a href="{% url 'rooms' %}">Rooms list</a>
+<br />
+<a href="{% url 'about' %}">About</a>
+<br />
+<a href="{% url 'date' %}">Date</a>
+{% endblock content %}
