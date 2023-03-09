@@ -1,0 +1,53 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="row justify-content-center my-3">
+  <div class="col-4">
+    <img src="{% static 'portfolio/icon.png' %}" class="img-fluid">
+  </div>
+</div>
+
+  
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+	<h3 class="font-weight-bold">SHAURYA KHURANA</h3>
+	<p class="font-weight-bold">"As a passionate philomath, my love for learning is insatiable. 
+	Every new discovery fuels my desire to delve deeper and expand my knowledge."</p>
+	<p>I possess the skills necessary for working with large data sets, including designing data pipelines, 
+	analyzing data to identify opportunities for product and process optimization, and implementing data-driven 
+	models to evaluate different courses of action. Over the course of my 6+ years of professional experience, 
+	I have become proficient in utilizing various data mining and analytical tools to gather, process, and 
+	transform raw data into Machine Learning models, as well as running simulations and developing algorithms 
+	to automate back-end processes. Additionally, I have a talent for creating data visualizations and tailoring 
+	them to the specific needs of clients, producing dashboards and reports that deliver actionable insights. 
+	As a lifelong learner, I am always eager to acquire new knowledge and expand my skillset.</p>
+  </div>
+</div>
+<br>
+<h2 class="mt-5">Technical Indicators</h2>
+<hr>
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
+
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
