@@ -1,5 +1,5 @@
 {% extends "portfolio/base.html" %}
-
+{% load markdown_extras %}
 {% load static %}
 
 {% block content %}
@@ -8,6 +8,6 @@
 
 <h5 class="text-center text-muted mb-5">{{ blog.date|date:'F jS Y' }}</h5>
 
-{{ blog.description|safe }}
+{{ blog.description | markdown | safe }}
 
 {% endblock %}
