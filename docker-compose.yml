@@ -29,3 +29,14 @@ services:
       - ./.dev.env
     depends_on:
       - db
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "9090:80"
+    volumes:
+      - .data/pgadmin_data:/var/lib/pgadmin
