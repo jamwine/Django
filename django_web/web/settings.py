@@ -133,3 +133,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "core.User"
+
+# Email server configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'dagjoins@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

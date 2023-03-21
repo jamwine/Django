@@ -130,3 +130,7 @@ dmypy.json
 
 # Directories
 data/postgres/
+
+# Secrets
+.secrets
+# .dev.env
