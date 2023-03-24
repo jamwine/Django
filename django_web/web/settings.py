@@ -29,6 +29,7 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
+SITE_ID = 1
 
 # Application definition
 
@@ -42,6 +43,10 @@ INSTALLED_APPS = [
     'core',
     'blog_app',
     'markdown_support',
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [

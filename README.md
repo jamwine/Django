@@ -51,6 +51,8 @@ After the Superuser gets created successfully, utilize the Django (on Docker ima
 - `docker-compose exec web python manage.py startapp <app-name>`
 - `docker-compose exec web python manage.py sqlmigrate <app-name> <migration-name/number>`
 - `docker-compose run --rm web sh -c "python manage.py runserver"`
+- `docker-compose exec web python -Xutf8 manage.py dumpdata --indent=2 --output=mysite_data.json`
+- `docker-compose exec web python manage.py shell`
 - `docker-compose run --rm web sh -c "python manage.py runserver 0.0.0.0:8000"`
 - `docker-compose logs -f`
 - Test the Django environment for any errors using this command: `docker-compose run --rm web sh -c "python manage.py test && flake8"`
