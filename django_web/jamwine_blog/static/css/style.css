@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  top: -20vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+/* .video-style {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+} */
+
+.custom_head {
+  font-family: "Julius Sans One", cursive;
+  font-size: 5vw;
+  text-shadow: 0em 0.0375em 0.120375em rgba(0, 0, 0, 0.237);
+  color: #141333;
+  line-height: 1em;
+  text-align: center;
+}
+
+.statement {
+  font-family: "Julius Sans One", cursive;
+  font-size: 1.5vw;
+  color: #12229d;
+  text-transform: uppercase;
+  line-height: 18em;
+  text-align: center;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: center;
+  z-index: 2; */
+  position: relative;
+  /* background: radial-gradient(rgba(3, 12, 23, 0), rgb(3, 15, 52)); */
+  /* background: radial-gradient(rgb(60 107 192 / 26%), rgb(12 43 111)); */
+  background: radial-gradient(rgb(37 16 255 / 10%), rgb(0 0 0 / 15%));
+
+}
+
+
+/* .jwclub {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 2vw;
+}
+
+.jwc {
+  font-family: "Raleway Dots", cursive;
+  font-size: 1vw;
+  color: #fff;
+}
+.footer {
+  background-color: #030505;
+} */
+
+
+/* ------------------------------------------- */
+
+/* header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+/* .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+} */
+
+/* ----------------------------------------------------- */
+
+
+/* canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  cursor: pointer;
+} */
+
+body {
+  background-repeat: repeat-y;
+  /* fallback for non-supporting browsers */
+  /* background-color: #111d20; */
+  /* standard */
+  background-image: linear-gradient(to left, #1b3a41, #031123);
+  /* for webkit browser - Chrome,Safari */
+  /* background-image: -webkit-linear-gradient(to left, #00d2ff, #3a7bd5); */
+  /* for mozilla browser */
+  /* background-image: -moz-linear-gradient(to left, #00d2ff, #3a7bd5); */
+  /* for opera browser */
+  /* background-image: -o-linear-gradient(to left, #00d2ff,#3a7bd5); */
+}
+
+#gear-1 {
+  margin-left: 250px;
+  margin-top: 200px;
+  transform-origin: 125px 125px;
+  /* color: rgb(192, 200, 206); */
+}
+
+#gear-2 {
+  /*float: left;*/
+  margin-left: 485px;
+  margin-top: -350px;
+  transform-origin: 100px 100px;
+}
+
+#gear-3 {
+  margin-left: 500px;
+  transform-origin: 75px 75px;
+}
+
+#gear-4 {
+  margin-left: 155px;
+  margin-top: -250px;
+  transform-origin: 50px 50px;
+}
+
+#gear-5 {
+  margin-left: 100px;
+  margin-top: 10px;
+  transform-origin: 75px 75px;
+}
+
+#gear-6 {
+  margin-left: 200px;
+  margin-top: -25px;
+  transform-origin: 100px 100px;
+}
+
+#gear-7 {
+  margin-left: 660px;
+  margin-top: -450px;
+  transform-origin: 125px 125px;
+}
+
+#gear-8 {
+  margin-left: 580px;
+  margin-top: -20px;
+  transform-origin: 100px 100px;
+}
+
+#gear-9 {
+  margin-left: 420px;
+  margin-top: -190px;
+  transform-origin: 75px 75px;
+}
+
+#gear-10 {
+  margin-left: 390px;
+  margin-top: -510px;
+}
+
+svg {
+  animation: animate 5s linear forwards infinite;
+  -webkit-animation: animate 5s linear forwards infinite;
+  -moz-animation: animate 5s linear forwards infinite;
+  -o-animation: animate 5s linear forwards infinite;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes animate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes animate {
+  to {
+    transform: rotate(360deg);
+  }
+}

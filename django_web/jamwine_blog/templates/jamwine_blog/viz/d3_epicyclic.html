@@ -1,0 +1,13 @@
+{% load static %}
+
+<div id="epicyclic-graph"></div> 
+
+  <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script> 
+  <script src="{% static 'js/epicyclic.js' %}"></script>
+  <script>
+    // Load data for epicyclic gearing graph
+    d3.json("{% url 'epicyclic_data' %}").then(function(data) {
+      // Call function to draw epicyclic gearing graph
+      drawEpicyclicGraph(data); 
+    }); 
+  </script>

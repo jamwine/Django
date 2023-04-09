@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from jamwine_blog.views import home_view , epicyclic_data
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_view, name='home'),
+    path('epicyclic_data/', epicyclic_data, name='epicyclic_data'),
 ]
