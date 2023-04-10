@@ -15,11 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from jamwine_blog.views import home_view , epicyclic_data
-
+from jamwine_blog.views import page_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view, name='home'),
-    path('epicyclic_data/', epicyclic_data, name='epicyclic_data'),
+    path('', page_view, {'page': 'home'}, name='home'),
+    path('about', page_view, {'page': 'about'}, name='about'),
+    path('music', page_view, {'page': 'music'}, name='music'),
+    path('tech', page_view, {'page': 'tech'}, name='tech'),
+    path('investing', page_view, {'page': 'investing'}, name='investing'),
+    path('gaming', page_view, {'page': 'gaming'}, name='gaming'),
+    path('merchandise', page_view, {'page': 'merchandise'}, name='merchandise'),
+    path('travel', page_view, {'page': 'travel'}, name='travel'),
+    path('contact', page_view, {'page': 'contact'}, name='contact'),
+    # path('epicyclic_data/', epicyclic_data, name='epicyclic_data'),
 ]

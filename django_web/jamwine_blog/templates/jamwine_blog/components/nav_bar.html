@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">JAMWINE</a>
+    <a class="navbar-brand" href="{% url 'home' %}">JAMWINE</a>
+    {% comment %} <a class="navbar-brand" href="{% url 'home' %}"> |   DATAJOINS</a> {% endcomment %}
     <button
       class="navbar-toggler"
       type="button"
@@ -15,25 +16,31 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="{% url 'about' %}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Music</a>
+          <a class="nav-link" href="{% url 'music' %}">Music</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tech</a>
+          <a class="nav-link" href="{% url 'tech' %}">Tech</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Investing</a>
+          <a class="nav-link" href="{% url 'investing' %}">Investing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Gaming</a>
+          <a class="nav-link" href="{% url 'gaming' %}">Gaming</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="{% url 'travel' %}">Travel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'merchandise' %}">Merchandise</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         </li>
       </ul>
     </div>

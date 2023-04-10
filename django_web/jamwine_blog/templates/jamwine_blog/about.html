@@ -1,0 +1,21 @@
+{% extends "jamwine_blog/base.html" %}
+{% load static %}
+
+{% block title %} SECOND SQUARE {% endblock title %}
+
+{% block content %}
+
+{% comment %} {% include "jamwine_blog/components/header_content.html" %} {% endcomment %}
+
+{% comment %} {% include "jamwine_blog/viz/d3_epicyclic.html" %} {% endcomment %}
+
+
+{% include "jamwine_blog/viz/ghosts.html" %}
+
+
+{% comment %} {% include "jamwine_blog/components/body_content.html" %} {% endcomment %}
+
+  
+{% comment %} {% include "jamwine_blog/components/footer.html" %} {% endcomment %}
+
+{% endblock content %}
