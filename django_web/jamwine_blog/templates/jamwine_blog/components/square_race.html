@@ -1,0 +1,122 @@
+<style>
+
+.square-container {
+    position: relative;
+    width: 100vw;
+    height: 35vh;
+    background-color: #13293d;
+    }
+
+.text-on-squares {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #7bcaff;
+    font-family: "Poppins", sans-serif;
+    font-size: 2vw;
+    z-index: 1;
+    }
+
+
+
+.box{
+  width:50px;
+  height:50px;
+  position:absolute;
+}
+
+.box:nth-child(1){
+  background-color:#00D2FF;
+  top:5px;
+  -webkit-animation: spin 2s infinite;
+}
+
+.box:nth-child(2){
+  background-color:#B2E5E5;
+  top:30px;
+  -webkit-animation: spin 4s infinite;
+}
+
+.box:nth-child(3){
+  background-color:#86BECB;
+  top:10px;
+  -webkit-animation: spin 7s infinite;
+}
+
+.box:nth-child(4){
+  background-color:#1AA3A3;
+  top:50px;
+  -webkit-animation: spin 6s infinite;
+}
+
+.box:nth-child(5){
+  background-color:green;
+  top:100px;
+  -webkit-animation: spin 3s infinite;
+}
+
+.box:nth-child(6){
+  background-color:#00D2FF;
+  top:110px;
+  -webkit-animation: spin 1s infinite;
+}
+
+.box:nth-child(7){
+  background-color:#B2E5E5;
+  top:90px;
+  -webkit-animation: spin 8s infinite;
+}
+
+.box:nth-child(8){
+  background-color:#86BECB;
+  top:75px;
+  -webkit-animation: spin 5s infinite;
+}
+
+.box:nth-child(9){
+  background-color:#1AA3A3;
+  top:30px;
+  -webkit-animation: spin 3s infinite;
+}
+
+.box:nth-child(10){
+  background-color:#0B5E56;
+  top:30px;
+  -webkit-animation: spin 4.5s infinite;
+}
+
+@-webkit-keyframes spin {
+  10%{
+    transform:rotate(30deg);
+    margin-left:0;
+    width:10px;
+    height:10px;
+  }
+  100%{
+    transform:rotate(180deg);
+    margin-left:85%;
+    width:150px;
+    height:150px;
+  }
+}
+</style>
+
+
+<div class="square-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    {% include "jamwine_blog/components/square_loader.html" %}
+    <div class="text-on-squares">
+        <p>The <b>SECOND SQUARE</b> Theory</p>
+    </div>
+</div>

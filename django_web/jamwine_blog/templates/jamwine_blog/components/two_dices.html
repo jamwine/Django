@@ -1,0 +1,232 @@
+<style>
+
+
+
+/* mixins */
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-o-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin translate($x, $y){
+	-webkit-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+/* loader styling */
+#loader{
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #a92727;
+}
+
+#loader .loader-o{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 200px;
+	height: 120px;
+	margin: auto;
+	text-align: center;
+}
+
+#loader .loader-o .wrapper{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#loader .loader-o .wrapper .squares{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0;
+	border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+#loader .loader-o .wrapper .squares .load-square{
+	display: inline-block;
+	width: 39px;
+	height: 39px;
+	position: absolute;
+	background-color: #fff;
+}
+
+#loader .loader-o .wrapper .squares .load-square:first-of-type{
+	left: 0;
+	top: 0;
+	animation: first-square 7s infinite linear;
+	-webkit-animation: first-square 7s infinite linear;
+	-o-animation: first-square 7s infinite linear;
+	-moz-animation: first-square 7s infinite linear;
+	-ms-animation: first-square 7s infinite linear;
+}
+
+#loader .loader-o .wrapper .squares .load-square:nth-of-type(2){
+	right: 0;
+	bottom: 0;
+	animation: second-square 7s infinite linear;
+	-webkit-animation: second-square 7s infinite linear;
+	-o-animation: second-square 7s infinite linear;
+	-moz-animation: second-square 7s infinite linear;
+	-ms-animation: second-square 7s infinite linear;
+}
+
+#loader .loader-o p{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+}
+
+/* loader animations */
+/* first square */
+@keyframes first-square{
+	0%{
+		transform: translate(0, 0);
+	}
+	20%{
+		transform: translate(0, 0);
+	}
+	25%{
+		transform: translate(39px, 0);
+	}
+	45%{
+		transform: translate(39px, 0);
+	}
+	50%{
+		transform: translate(39px, 39px);
+	}
+	70%{
+		transform: translate(39px, 39px);
+	}
+	75%{
+		transform: translate(0, 39px);
+	}
+	95%{
+		transform: translate(0, 39px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+@-webkit-keyframes first-square{
+	0%{
+		transform: translate(0, 0);
+	}
+	20%{
+		transform: translate(0, 0);
+	}
+	25%{
+		transform: translate(39px, 0);
+	}
+	45%{
+		transform: translate(39px, 0);
+	}
+	50%{
+		transform: translate(39px, 39px);
+	}
+	70%{
+		transform: translate(39px, 39px);
+	}
+	75%{
+		transform: translate(0, 39px);
+	}
+	95%{
+		transform: translate(0, 39px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+/* second square */
+@keyframes second-square{
+	0%{
+		transform: translate(0, 0);
+	}
+	20%{
+		transform: translate(0, 0);
+	}
+	25%{
+		transform: translate(-39px, 0);
+	}
+	45%{
+		transform: translate(-39px, 0);
+	}
+	50%{
+		transform: translate(-39px, -39px);
+	}
+	70%{
+		transform: translate(-39px, -39px);
+	}
+	75%{
+		transform: translate(0, -39px);
+	}
+	95%{
+		transform: translate(0, -39px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+@-webkit-keyframes second-square{
+	0%{
+		transform: translate(0, 0);
+	}
+	20%{
+		transform: translate(0, 0);
+	}
+	25%{
+		transform: translate(-39px, 0);
+	}
+	45%{
+		transform: translate(-39px, 0);
+	}
+	50%{
+		transform: translate(-39px, -39px);
+	}
+	70%{
+		transform: translate(-39px, -39px);
+	}
+	75%{
+		transform: translate(0, -39px);
+	}
+	95%{
+		transform: translate(0, -39px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+
+</style>
+
+<!-- loader -->
+		<section id="loader">
+			<div class="loader-o">
+				<div class="wrapper">
+					<div class="squares">
+						<span class="load-square"></span>
+						<span class="load-square"></span>
+					</div>
+					<p>loading</p>
+				</div>
+			</div>
+		</section>

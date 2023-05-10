@@ -1,0 +1,122 @@
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+.square-loader-box {
+  margin: 50px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+
+.square-loader {
+  width: 40px;
+  height: 40px;
+  float: left;
+  border: 2px solid white;
+  background: rgba(0, 125, 250, 0.5);
+}
+
+.square-loader-container {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #13293d;
+}
+
+.square-loader:nth-child(1) {
+  animation: first-square 3s infinite ease-out;
+}
+
+.square-loader:nth-child(2) {
+  animation: second-square 3s infinite ease-out;
+}
+
+.square-loader:nth-child(4) {
+  animation: third-square 3s infinite ease-out;
+}
+
+.square-loader:nth-child(3) {
+  animation: fourth-square 3s infinite ease-out;
+}
+
+@keyframes first-square {
+  0% {
+    background: rgba(0, 125, 250, 1);
+  }
+
+  20% {
+    background: rgba(0, 125, 250, 1);
+  }
+  30% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+  85% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+  100% {
+    background: rgba(0, 125, 250, 1);
+  }
+}
+@keyframes second-square {
+  20% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+
+  45% {
+    background: rgba(0, 125, 250, 1);
+  }
+  55% {
+    background: rgba(0, 125, 250, .5);
+  }
+  85% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+  100% {
+    background: rgba(0, 125, 250, 1);
+  }
+}
+@keyframes third-square {
+  45% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+
+  65% {
+    background: rgba(0, 125, 250, 1);
+  }
+  75% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+  85% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+  100% {
+    background: rgba(0, 125, 250, 1);
+  }
+}
+@keyframes fourth-square {
+  65% {
+    background: rgba(0, 125, 250, 0.5);
+  }
+
+  85% {
+    background: rgba(0, 125, 250, 1);
+  }
+  100% {
+    background: rgba(0, 125, 250, 1);
+  }
+}
+
+</style>
+
+<div class="square-loader-container">
+  <div class="square-loader-box">
+  <div class="square-loader"></div>
+  <div class="square-loader"></div>
+  <div class="square-loader"></div>
+  <div class="square-loader"></div>
+  </div>
+</div>
